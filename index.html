@@ -79,7 +79,7 @@ th { color: var(--muted); font-weight: 500; background: var(--code-bg); }
 <p class="tagline">A working index of the four GitHub orgs that house the quilt project family. Sketchbook, production, hardened output, ready-to-use. Last refreshed 2026-10-15.</p>
 
 <h2><span class="org-banner org-rd">SuperInstance</span> Sketchbook &amp; R&amp;D</h2>
-<p class="muted">Everything we've thought of. The 5,208-repo fleet is intentional — sketches, dead ends, the live stream, and the supporting canon all live here. <em>We don't archive from this org.</em> The active stream is what's shown below; the rest is lineage.</p>
+<p class="muted">Everything we've thought of. The 5,253-repo fleet is intentional — sketches, dead ends, the live stream, and the supporting canon all live here. <em>We don't archive from this org.</em> The active stream is what's shown below; the rest is lineage.</p>
 
 <div class="repo">
   <h3><a href="https://github.com/SuperInstance/quilt">quilt</a> <span class="dot green"></span></h3>
@@ -104,12 +104,27 @@ th { color: var(--muted); font-weight: 500; background: var(--code-bg); }
 <div class="repo">
   <h3><a href="https://github.com/SuperInstance/git.pp-doctor">git.pp-doctor</a> <span class="dot green"></span></h3>
   <p class="desc">Record-set validator for git.pp. Single Python file, stdlib only, byte-identical to the hub's referee for the operations it supports. Three-way verdict: VERIFIED / STATE-ONLY / MISMATCH.</p>
-  <p class="meta">Pushed 2026-10-15 · <code>gitpp_doctor.py</code> + README</p>
+  <p class="meta">Pushed 2026-10-15 · <code>gitpp_doctor.py</code> v0.2.0 — 5 commands (root/check/fold/explain/compare)</p>
 </div>
 <div class="repo">
   <h3><a href="https://github.com/SuperInstance/gitpp-rust">gitpp-rust</a> <span class="dot amber"></span></h3>
-  <p class="desc">4th port of the git.pp fold in Rust. Doc-only discipline (written from DESIGN.md, not the existing sources). Catches assumptions the TS / Python / Elixir ports share.</p>
+  <p class="desc">6th fold port (planned). Currently scaffolded — no cargo in the session sandbox. Doc-only discipline: written from git.pp-spec v0.3.0 alone once the toolchain is available.</p>
   <p class="meta">Scaffolded 2026-10-15 · build in progress · pass criterion: closure root at <code>poc-quilt-1@task-c = 60effe23970d…fc91d</code></p>
+</div>
+<div class="repo">
+  <h3><a href="https://github.com/SuperInstance/gitpp-js">gitpp-js</a> <span class="dot green"></span></h3>
+  <p class="desc">4th fold port in pure-ESM JavaScript. No dependencies, no build step. Runs in any modern browser or Node 18+. Doc-only discipline: written from git.pp-spec v0.3.0 alone.</p>
+  <p class="meta">Pushed 2026-10-15 · v0.1.0 · 12/12 tests + 4 LIVE</p>
+</div>
+<div class="repo">
+  <h3><a href="https://github.com/SuperInstance/gitpp-cs">gitpp-cs</a> <span class="dot green"></span></h3>
+  <p class="desc">5th fold port in C# / .NET 9. Stdlib only. AOT-compilable, Azure-Functions-friendly. Doc-only discipline: had to read gitpp-js to learn the byte-level encoding (now documented in spec v0.3.0 §2.5).</p>
+  <p class="meta">Pushed 2026-10-15 · v0.2.0 · 28/28 conformance cases pass</p>
+</div>
+<div class="repo">
+  <h3><a href="https://github.com/SuperInstance/gitpp-pl">gitpp-pl</a> <span class="dot green"></span></h3>
+  <p class="desc">6th fold port in Perl 5. Stdlib only (Digest::SHA + JSON::PP + Encode). 4-byte UTF-8 (🚀) handled natively. Doc-only discipline: written from git.pp-spec v0.3.0 alone.</p>
+  <p class="meta">Pushed 2026-10-15 · v0.1.0 · 28/28 conformance + 4/4 cross-port leaves</p>
 </div>
 <div class="repo">
   <h3><a href="https://github.com/SuperInstance/fold-bout">fold-bout</a> <span class="dot amber"></span></h3>
@@ -232,7 +247,37 @@ th { color: var(--muted); font-weight: 500; background: var(--code-bg); }
     <tr>
       <td><code>SuperInstance/git.pp-doctor</code></td>
       <td>Record-set validator (single file, stdlib only)</td>
-      <td><span class="dot green"></span>v0.1.0 landed; closure root at task-c matches hub</td>
+      <td><span class="dot green"></span>v0.2.0 — 5 commands; closure root at task-c matches hub</td>
+    </tr>
+    <tr>
+      <td><code>SuperInstance/gitpp-js</code></td>
+      <td>4th fold port in pure-ESM JavaScript</td>
+      <td><span class="dot green"></span>v0.1.0; 12/12 tests + 4 LIVE</td>
+    </tr>
+    <tr>
+      <td><code>SuperInstance/gitpp-cs</code></td>
+      <td>5th fold port in C# / .NET 9, stdlib only</td>
+      <td><span class="dot green"></span>v0.2.0; 28/28 conformance cases pass</td>
+    </tr>
+    <tr>
+      <td><code>SuperInstance/gitpp-pl</code></td>
+      <td>6th fold port in Perl 5, stdlib only</td>
+      <td><span class="dot green"></span>v0.1.0; 28/28 conformance + 4/4 cross-port leaves</td>
+    </tr>
+    <tr>
+      <td><code>SuperInstance/git.pp-spec</code></td>
+      <td>Canonical, normative spec for the record format</td>
+      <td><span class="dot green"></span>v0.3.0; 12 sections incl. §2.5/§3.5/§5.2/§12</td>
+    </tr>
+    <tr>
+      <td><code>SuperInstance/gitpp-conformance</code></td>
+      <td>Public 28-case conformance corpus + runner.mjs</td>
+      <td><span class="dot green"></span>28/28 pass against JS, C#, Perl</td>
+    </tr>
+    <tr>
+      <td><code>SuperInstance/session-summary-2026-10-15</code></td>
+      <td>One-page session summary: 15 new repos, 6 ports, §6 doctrine</td>
+      <td><span class="dot green"></span>Pushed 2026-10-15</td>
     </tr>
   </tbody>
 </table>
